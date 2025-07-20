@@ -50,6 +50,7 @@ export const products = [
     rate: 4.4,
     price: 1000,
     priceBeforeDiscount: 1200,
+    loved: true,
     image: "https://i.postimg.cc/8zQbdmqG/Rectangle-22488.png",
   },
   {
@@ -59,6 +60,7 @@ export const products = [
     rate: 4.4,
     price: 1000,
     priceBeforeDiscount: 1200,
+    loved: false,
     image: "https://i.postimg.cc/ncQkQPST/Rectangdle-22488.png",
   },
   {
@@ -68,6 +70,7 @@ export const products = [
     rate: 4.4,
     price: 1000,
     priceBeforeDiscount: 1200,
+    loved: true,
     image: "https://i.postimg.cc/8zQbdmqG/Rectangle-22488.png",
   },
 ];

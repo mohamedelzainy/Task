@@ -28,6 +28,7 @@ export default function RootLayout() {
     if (!I18nManager.isRTL) {
       I18nManager.allowRTL(true);
       I18nManager.forceRTL(true);
+      // Updates.reloadAsync();
     }
   }, []);
 

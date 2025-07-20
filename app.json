@@ -34,12 +34,15 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ]
+      ],
+      "expo-localization"
     ],
     "experiments": {
       "typedRoutes": true
     },
     "extra": {
+      "supportsRTL": true,
+      "forcesRTL": true,
       "router": {},
       "eas": {
         "projectId": "bbcf6a00-4274-4db5-bbae-2357cfb5bd6c"

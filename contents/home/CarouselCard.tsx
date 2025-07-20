@@ -34,19 +34,19 @@ export function CarouselCard() {
         onProgressChange={progress}
         renderItem={({ item }) => (
           <View style={styles.slider}>
-            <View style={{ flexDirection: "column", width: "50%" }}>
-              <Text style={styles.sliderText}>{item.title}</Text>
-              <View className="flex-row items-center gap-1 ml-2">
-                <BackIcon />
-                <Text style={{ fontFamily: "PingBold", color: "#11296B" }}>
-                  المزيد
-                </Text>
-              </View>
-            </View>
             <Image
               source={{ uri: item.image }}
               style={{ width: "50%", height: 150 }}
             />
+            <View style={{ flexDirection: "column", width: "50%" }}>
+              <Text style={styles.sliderText}>{item.title}</Text>
+              <View className="flex-row items-center justify-end gap-1 mr-5 mt-5">
+                <Text style={{ fontFamily: "PingBold", color: "#11296B" }}>
+                  المزيد
+                </Text>
+                <BackIcon />
+              </View>
+            </View>
           </View>
         )}
       />
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
     overflow: "hidden",
   },
   sliderText: {
-    textAlign: "right",
+    textAlign: "left",
     fontSize: 20,
     fontFamily: "PingBold",
     color: "#11296B",

@@ -19,9 +19,9 @@ export default function HomeScreen() {
     return (
       <>
         <CarouselCard />
-        <View className="flex-row justify-between">
-          <Text style={styles.text}>المزيد</Text>
+        <View className="flex-row justify-between mt-3 mb-2">
           <Text style={[styles.text, { color: "#191D31" }]}>التصنيفات</Text>
+          <Text style={styles.text}>المزيد</Text>
         </View>
         <FlatList
           data={categories}
@@ -32,16 +32,16 @@ export default function HomeScreen() {
           }}
         />
 
-        <View className="flex-row justify-between">
-          <View className="flex-row items-center gap-1 ml-2">
-            <BackIcon />
-            <Text style={{ fontFamily: "PingBold", color: "#11296B" }}>
-              الجميع
-            </Text>
-          </View>
+        <View className="flex-row justify-between mt-3 mb-2">
           <Text style={[styles.text, { fontSize: 18, color: "#191D31" }]}>
             منتجات جديدة
           </Text>
+          <View className="flex-row items-center gap-1 ml-2">
+            <Text style={{ fontFamily: "PingBold", color: "#11296B" }}>
+              الجميع
+            </Text>
+            <BackIcon />
+          </View>
         </View>
       </>
     );
@@ -52,18 +52,18 @@ export default function HomeScreen() {
       headerBackgroundColor={{ light: "#FFFFFF", dark: "#1D3D47" }}
       headerImage={
         <ThemedView className="flex-row justify-between items-center mx-5 mt-16">
+          <View className="w-[30%]">
+            <View className="absolute top-3 left-2 z-[99]">
+              <SearchIcon />
+            </View>
+            <TextInput
+              placeholder="اكتشف..."
+              className="rounded-[20] bg-[#F3F3F3] pl-[22] items-center h-10 font-pingMedium"
+            />
+          </View>
           <View className="flex-row gap-3 items-center">
             <GoBackIcon />
             <NotificationIcon />
-          </View>
-          <View className="w-[30%]">
-            <TextInput
-              placeholder="اكتشف..."
-              className="rounded-[20] bg-[#F3F3F3] pr-6 h-10 font-pingMedium"
-            />
-            <View className="absolute top-3 right-2">
-              <SearchIcon />
-            </View>
           </View>
         </ThemedView>
       }
